@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakshya Institute</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-bar glass-panel">
+      <img src="logo.png" alt="Lakshya Computer Institute" class="institute-logo" />
+      <button
+        id="theme-toggle"
+        class="theme-switch"
+        type="button"
+        role="switch"
+        aria-checked="false"
+        aria-label="Toggle dark and light mode"
+      >
+        <span class="theme-switch__track">
+          <span class="theme-switch__thumb"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="courses" class="section">
+      <div class="container">
+        <h2 class="section-title">Course Brochure</h2>
+        <div id="course-list" class="course-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="course-modal" class="course-modal" hidden aria-hidden="true">
+    <div id="modal-backdrop" class="course-modal__backdrop"></div>
+    <div class="course-modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="course-modal__sticky glass-panel">
+        <button id="modal-close" class="course-modal__close" type="button" aria-label="Close popup">Close</button>
+        <p id="modal-code" class="course-code course-code--sticky"></p>
+      </div>
+      <h2 id="modal-title" class="course-modal__title"></h2>
+      <div id="modal-meta" class="course-meta"></div>
+
+      <div class="course-modal__content">
+        <section class="course-modal__column">
+          <h3>Extra Details</h3>
+          <div id="modal-details" class="details-stack"></div>
+        </section>
+        <section class="course-modal__column">
+          <h3>Syllabus</h3>
+          <ol id="modal-syllabus" class="syllabus-list"></ol>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
